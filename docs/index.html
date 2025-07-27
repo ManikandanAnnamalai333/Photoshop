@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LensCapture - Professional Photography</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-title">LensCapture</div>
+            <div class="loading-subtitle">Loading beautiful moments...</div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor" class="custom-cursor"></div>
+
+    <!-- Floating Particles -->
+    <div id="particles-container" class="particles-container"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-camera rotating-icon"></i>
+                <span class="brand-text">LensCapture</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#services" class="mobile-nav-link">Services</a>
+            <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&h=1080&fit=crop')"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?w=1920&h=1080&fit=crop')"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1920&h=1080&fit=crop')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="word-reveal">Capturing</span>
+                    <span class="word-reveal">Life's</span>
+                    <span class="gradient-text word-reveal">Beautiful Moments</span>
+                </h1>
+                <p class="hero-subtitle fade-in-up">Professional photography for weddings, birthdays, and special events</p>
+                <div class="hero-cta fade-in-up">
+                    <button class="magnetic-btn primary-btn" onclick="scrollToSection('contact')">
+                        <span class="btn-shine"></span>
+                        <span class="btn-text">Book Your Session</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-sparkles"></i>
+                    <h2>Our Services</h2>
+                    <i class="fas fa-sparkles"></i>
+                </div>
+                <p class="section-subtitle">We specialize in capturing the essence of your most important moments</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-service="wedding">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">
+                        <i class="fas fa-heart rotating-hover"></i>
+                    </div>
+                    <h3 class="service-title">Wedding Photography</h3>
+                    <p class="service-description">Capture your special day with romantic, timeless photography that tells your unique love story.</p>
+                    <p class="service-price">Starting at $2,500</p>
+                </div>
+                
+                <div class="service-card" data-service="birthday">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">
+                        <i class="fas fa-gift rotating-hover"></i>
+                    </div>
+                    <h3 class="service-title">Birthday Celebrations</h3>
+                    <p class="service-description">Make every birthday memorable with vibrant, joyful photography that captures all the fun moments.</p>
+                    <p class="service-price">Starting at $800</p>
+                </div>
+                
+                <div class="service-card" data-service="corporate">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">
+                        <i class="fas fa-users rotating-hover"></i>
+                    </div>
+                    <h3 class="service-title">Corporate Events</h3>
+                    <p class="service-description">Professional event photography for conferences, parties, and corporate celebrations.</p>
+                    <p class="service-price">Starting at $1,200</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="gradient-title">Our Portfolio</h2>
+                <p class="section-subtitle">A glimpse into our recent work and the memories we've helped create</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-image="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&h=1200&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&h=600&fit=crop" alt="Portfolio 1">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-icon"><i class="fas fa-camera"></i></div>
+                        <div class="portfolio-text">View Full Size</div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-image="https://images.unsplash.com/photo-1546587348-d12660c30c50?w=800&h=1200&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1546587348-d12660c30c50?w=400&h=600&fit=crop" alt="Portfolio 2">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-icon"><i class="fas fa-camera"></i></div>
+                        <div class="portfolio-text">View Full Size</div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-image="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=800&h=1200&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=400&h=600&fit=crop" alt="Portfolio 3">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-icon"><i class="fas fa-camera"></i></div>
+                        <div class="portfolio-text">View Full Size</div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-image="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&h=1200&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400&h=600&fit=crop" alt="Portfolio 4">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-icon"><i class="fas fa-camera"></i></div>
+                        <div class="portfolio-text">View Full Size</div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-image="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=1200&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=600&fit=crop" alt="Portfolio 5">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-icon"><i class="fas fa-camera"></i></div>
+                        <div class="portfolio-text">View Full Size</div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-image="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=1200&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=600&fit=crop" alt="Portfolio 6">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-icon"><i class="fas fa-camera"></i></div>
+                        <div class="portfolio-text">View Full Size</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="Portfolio Image">
+            <button class="lightbox-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-award"></i>
+                    <h2>What Our Clients Say</h2>
+                    <i class="fas fa-award"></i>
+                </div>
+                <p class="section-subtitle">Don't just take our word for it - hear from our happy clients</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-overlay"></div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star star-animate"></i>
+                        <i class="fas fa-star star-animate"></i>
+                        <i class="fas fa-star star-animate"></i>
+                        <i class="fas fa-star star-animate"></i>
+                        <i class="fas fa-star star-animate"></i>
+                    </div>
+                    <p class="testimonial-text">"Absolutely stunning photos! Every moment was captured perfectly. We couldn't be happier with our wedding album."</p>
+                    <div class="testimonial-author">
+                        <div class="author-name">Sarah & Michael</div>
+                        <div class="author-event">Wedding</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-overlay"></div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star star-animate"></i>
+                        <i class="fas fa-star star-animate"></i>
+                        <i class="fas fa-star star-animate"></i>
+                        <i class="fas fa-star star-animate"></i>
+                        <i class="fas fa-star star-animate"></i>
+                    </div>
+                    <p class="testimonial-text">"The birthday photos exceeded our expectations. Professional, creative, and so much fun to work with!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-name">Jennifer Martinez</div>
+                        <div class="author-event">Birthday Party</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-overlay"></div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star star-animate"></i>
+                        <i class="fas fa-star star-animate"></i>
+                        <i class="fas fa-star star-animate"></i>
+                        <i class="fas fa-star star-animate"></i>
+                        <i class="fas fa-star star-animate"></i>
+                    </div>
+                    <p class="testimonial-text">"Outstanding service for our annual conference. High-quality photos delivered promptly and professionally."</p>
+                    <div class="testimonial-author">
+                        <div class="author-name">Corporate Solutions Inc.</div>
+                        <div class="author-event">Company Event</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="color-changing-title">About LensCapture</h2>
+                    <p class="about-description">With over 8 years of experience in professional photography, we specialize in capturing the authentic emotions and beautiful moments that make your events truly special.</p>
+                    <p class="about-description">Our approach combines artistic vision with technical expertise to deliver stunning photographs that you'll treasure for a lifetime. We believe every moment tells a story, and we're here to help you tell yours.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="500">0</div>
+                            <div class="stat-label">Events Captured</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="8">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="floating-image">
+                        <img src="https://images.unsplash.com/photo-1554048612-b6a482b22128?w=600&h=800&fit=crop" alt="Photographer at work">
+                        <div class="image-badge">
+                            <i class="fas fa-camera rotating-badge"></i>
+                            <div class="badge-text">
+                                <div class="badge-title">Professional</div>
+                                <div class="badge-subtitle">Equipment</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="glowing-title">Get In Touch</h2>
+                <p class="section-subtitle">Ready to capture your special moments? Let's discuss your photography needs</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <div class="contact-card">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" placeholder="John" class="magnetic-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Doe" class="magnetic-input">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" class="magnetic-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="eventType">Event Type</label>
+                                <input type="text" id="eventType" name="eventType" placeholder="Wedding, Birthday, Corporate, etc." class="magnetic-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your event and photography needs..." class="magnetic-input"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="magnetic-btn submit-btn">
+                                <span class="btn-shine"></span>
+                                <span class="btn-text">Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item magnetic-hover">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item magnetic-hover">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>hello@lenscapture.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item magnetic-hover">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>New York, NY &amp; surrounding areas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="guarantee-card">
+                        <h3>Quick Response Guarantee</h3>
+                        <p>We typically respond to all inquiries within 24 hours. For urgent requests, please call us directly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-overlay"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-camera rotating-icon"></i>
+                        <span class="brand-text">LensCapture</span>
+                    </div>
+                    <p class="footer-description">Professional photography services for life's most important moments. Creating beautiful memories that last a lifetime.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#" class="footer-link">Wedding Photography</a></li>
+                        <li><a href="#" class="footer-link">Birthday Celebrations</a></li>
+                        <li><a href="#" class="footer-link">Corporate Events</a></li>
+                        <li><a href="#" class="footer-link">Portrait Sessions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#portfolio" class="footer-link">Portfolio</a></li>
+                        <li><a href="#about" class="footer-link">About Us</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">Pricing</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 LensCapture Photography. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
